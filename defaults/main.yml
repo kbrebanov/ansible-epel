@@ -1,7 +1,7 @@
 ---
 # defaults file for epel
 
-epel_url_6: http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+epel_url_6: http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 epel_url_7: http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
 
 epel_repo_enabled: 1
