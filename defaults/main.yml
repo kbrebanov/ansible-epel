@@ -1,10 +1,10 @@
 ---
 # defaults file for epel
 
-epel_repo_enabled: 1
-epel_repo_debuginfo_enabled: 0
-epel_repo_source_enabled: 0
+epel_repo_enabled: true
+epel_repo_debuginfo_enabled: false
+epel_repo_source_enabled: false
 
-epel_repo_testing_enabled: 0
-epel_repo_testing_debuginfo_enabled: 0
-epel_repo_testing_source_enabled: 0
+epel_repo_testing_enabled: false
+epel_repo_testing_debuginfo_enabled: false
+epel_repo_testing_source_enabled: false
