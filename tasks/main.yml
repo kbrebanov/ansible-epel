@@ -1,34 +1,14 @@
 ---
 # tasks file for epel
 
-- name: Install EPEL package for CentOS 6
-  yum: >
-    name="{{ epel_url_6 }}"
-    state=present
-  when: ansible_distribution_major_version == "6"
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
   tags: epel
 
-- name: Install EPEL package for CentOS 7
-  yum: >
-    name="{{ epel_url_7 }}"
-    state=present
-  when: ansible_distribution_major_version == "7"
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
   tags: epel
 
-- name: Create epel.repo file
-  template: >
-    src=epel.repo.j2
-    dest=/etc/yum.repos.d/epel.repo
-    owner=root
-    group=root
-    mode=0644
-  tags: epel
-
-- name: Create epel-testing.repo file
-  template: >
-    src=epel-testing.repo.j2
-    dest=/etc/yum.repos.d/epel-testing.repo
-    owner=root
-    group=root
-    mode=0644
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
   tags: epel
