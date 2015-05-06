@@ -1,6 +1,8 @@
 epel
 ====
 
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.epel-660198.svg)](https://galaxy.ansible.com/list#/roles/3290)
+
 Installs and configures Yum EPEL repository.
 
 Requirements
