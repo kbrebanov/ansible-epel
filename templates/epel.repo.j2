@@ -9,7 +9,7 @@ enabled=1
 enabled=0
 {% endif %}
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
+gpgkey=file:///etc/pki/rpm-gpg/{{ gpgkey_file }}
 
 [epel-debuginfo]
 name=Extra Packages for Enterprise Linux {{ ansible_distribution_major_version }} - $basearch - Debug
@@ -21,7 +21,7 @@ enabled=1
 {% else %}
 enabled=0
 {% endif %}
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
+gpgkey=file:///etc/pki/rpm-gpg/{{ gpgkey_file }}
 gpgcheck=1
 
 [epel-source]
@@ -34,5 +34,5 @@ enabled=1
 {% else %}
 enabled=0
 {% endif %}
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
+gpgkey=file:///etc/pki/rpm-gpg/{{ gpgkey_file }}
 gpgcheck=1

@@ -1,18 +1,10 @@
 ---
 # tasks file for epel (CentOS specific)
 
-- name: Install EPEL package for CentOS 6
-  yum: >
-    name="{{ epel_url_6 }}"
-    state=present
-  when: ansible_distribution_major_version == "6"
-  tags: epel
-
-- name: Install EPEL package for CentOS 7
-  yum: >
-    name="{{ epel_url_7 }}"
-    state=present
-  when: ansible_distribution_major_version == "7"
+- name: Install EPEL package
+  package:
+    name: "epel-release"
+    state: present
   tags: epel
 
 - name: Create epel.repo file

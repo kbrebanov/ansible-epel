@@ -1,7 +1,7 @@
 epel
 ====
 
-[![Ansible Role](https://img.shields.io/ansible/role/3290.svg)](https://galaxy.ansible.com/list#/roles/3290)
+[![Build Status](https://travis-ci.org/kostyrevaa/ansible-epel.svg?branch=master)](https://travis-ci.org/kostyrevaa/ansible-epel)[![Ansible Role](https://img.shields.io/ansible/role/3290.svg)](https://galaxy.ansible.com/list#/roles/3290)
 
 Installs and configures Yum EPEL repository.
 
