@@ -1,0 +1,18 @@
+---
+ansible:
+  playbook: playbook.yml
+
+docker:
+  containers:
+
+    - name: epel-centos5
+      image: centos
+      image_version: 5
+
+    - name: epel-centos6
+      image: centos
+      image_version: 6
+
+    - name: epel-centos7
+      image: centos
+      image_version: 7

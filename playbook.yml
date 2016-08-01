@@ -1,0 +1,16 @@
+---
+- hosts: epel-centos5
+  gather_facts: false
+  tasks:
+    - name: install packages for ansible support
+      raw: yum -y install python-simplejson
+
+- hosts: all
+  roles:
+    - role: ansible-epel
+      epel_repo_testing_enabled: true
+  post_tasks:
+    - name: install varnish from epel repo
+      package:
+        name: varnish
+        state: present
