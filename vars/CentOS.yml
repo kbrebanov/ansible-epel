@@ -2,4 +2,4 @@
 # vars file for epel (CentOS specific)
 
 epel_url_6: http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-epel_url_7: http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-8.noarch.rpm
+epel_url_7: http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
